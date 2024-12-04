@@ -225,6 +225,7 @@ class MultiHeadAttention(nn.Module):
             - d: embed dim
             - h_d: head dim
         """
+        import pdb; pdb.set_trace()
         # x has shape [b, s_x, d]
         # y has shape [b, s_y, d]
         b, s_x, _ = x.shape

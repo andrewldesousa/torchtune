@@ -613,6 +613,7 @@ class TransformerDecoder(nn.Module):
             - d_e: encoder embed dim
             - m_s: max seq len
         """
+        import pdb; pdb.set_trace()
         # input tensor of shape [b, s]
         seq_len = tokens.shape[1]
 

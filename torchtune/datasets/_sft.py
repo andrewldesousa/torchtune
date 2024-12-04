@@ -118,6 +118,7 @@ class SFTDataset(Dataset):
         return self._prepare_sample(sample)
 
     def _prepare_sample(self, sample: Mapping[str, Any]) -> Dict[str, Any]:
+        import pdb; pdb.set_trace()
         transformed_sample = self._message_transform(sample)
         if "messages" in transformed_sample:
             validate_messages(transformed_sample["messages"])

@@ -631,6 +631,7 @@ class LoRAFinetuneRecipeSingleDevice(FTRecipeInterface):
 
     def _loss_step(self, batch: Dict[str, torch.Tensor]) -> torch.Tensor:
         # Shape [b, s], needed for the loss not the model
+        import pdb; pdb.set_trace()
         labels = batch.pop("labels")
         # run model
         with self.activations_handling_ctx:
@@ -677,6 +678,7 @@ class LoRAFinetuneRecipeSingleDevice(FTRecipeInterface):
 
                 pbar = tqdm(total=self._steps_per_epoch)
                 for idx, batch in enumerate(self._dataloader):
+                    import pdb; pdb.set_trace()
                     if (
                         self.max_steps_per_epoch is not None
                         and (idx // self._gradient_accumulation_steps)

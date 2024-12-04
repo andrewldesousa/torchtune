@@ -203,6 +203,7 @@ def lora_llama3_2(
         a subset of the attention projections in each layer.
 
     """
+    import pdb; pdb.set_trace()
 
     hidden_dim = intermediate_dim if intermediate_dim else scale_hidden_dim_for_mlp(embed_dim)
     head_dim = embed_dim // num_heads
